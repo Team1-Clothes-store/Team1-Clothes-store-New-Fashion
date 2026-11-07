@@ -1,0 +1,223 @@
+﻿E-COMMERCE PROJECTPLANNING & SYSTEM DESIGN
+Assignment – Midterm 1
+Project Name
+Phonk Fashion – Online Clothing Store
+Business Type
+E-Commerce / Online Fashion
+E-Commerce Model
+B2C (Business to Customer)
+Prepared By
+1. Niem sreynit
+2. Ruon Bulimunny
+3. Surs Panha
+4. Chem Malin___________________________
+Class / Instructor
+_PG-B___________________________
+1. Business Planning
+1.1 Business / Shop Name
+Phonk Fashion
+1.2 Business Idea
+Phonk Fashion គឺជា Online Clothing Store ដែលអតិថិជនអាចចូលមក Browse Fashion Products, មើល Product Details, និងជ្រើសរើសផលិតផលដែលខ្លួនចង់បាន។
+អតិថិជនអាច Add Products to Shopping Cart, បន្ទាប់មក Place Order និងធ្វើ Mock Payment តាមរយៈ E-Commerce Website។ ប្រព័ន្ធនេះត្រូវបានបង្កើតឡើង ដើម្បីធ្វើឱ្យការទិញសម្លៀកបំពាក់ Online មានភាពងាយស្រួល និងរហ័ស។
+1.3 Products / Services
+Women’s Clothing – មានដូចជា Dresses, Shirts, Skirts និង Pants សម្រាប់នារី។.
+Men’s Clothing – មានដូចជា Shirts, T-Shirts និង Pants សម្រាប់បុរស។
+Fashion Accessories – មានដូចជា Bags, Caps និង Accessories ផ្សេងៗ សម្រាប់បន្ថែម Style។
+Online Ordering and Delivery Service – អតិថិជនអាច Order Products Online ហើយមាន Delivery Service ដឹកជញ្ជូនទៅកាន់អតិថិជន។.
+Customer Order Tracking and Order Confirmation – អតិថិជនអាច Track Order ដើម្បីពិនិត្យស្ថានភាពការបញ្ជាទិញ និងទទួល Order Confirmation បន្ទាប់ពីការបញ្ជាទិញត្រូវបានបញ្ចប់។
+1.4 Target Customer
+Teenagers and Young Adults – យុវវ័យ និងមនុស្សវ័យក្មេងដែលចូលចិត្តទិញ Fashion Products Online។
+Customers who prefer convenient shopping from home – អតិថិជនដែលចូលចិត្ត Shopping ពីផ្ទះ ព្រោះវាមានភាពងាយស្រួល និងសន្សំពេលវេលា។
+Customers who want to search and compare products – អតិថិជនដែលចង់ Search និង Compare Products ដូចជា តម្លៃ Style និងព័ត៌មានផលិតផល មុនពេល Order។
+Smartphone and Computer Users – អតិថិជនដែលប្រើ Smartphones ឬ Computers សម្រាប់ Online Shopping និងការបញ្ជាទិញទំនិញ។
+1.5 Customer Need / Problem Solved
+Save Time – អតិថិជនអាច Shopping Online ដើម្បីសន្សំពេលវេលា ជំនួសឱ្យការទៅ Physical Store ដោយផ្ទាល់។
+Easy Product Search – ប្រព័ន្ធជួយឱ្យអតិថិជន Search Products បានងាយស្រួល ដោយប្រើ Categories និង Search Function។
+View Product Information – អតិថិជនអាចមើល Product Information ដូចជា តម្លៃ រូបភាព និងព័ត៌មានផ្សេងៗ មុនពេល Purchase។
+Online Ordering – អតិថិជនអាច Order Products Online ហើយទទួលបាន Order Confirmation បន្ទាប់ពីការបញ្ជាទិញ។.
+1.6 Business Model
+Project នេះប្រើ B2C (Business-to-Consumer) E-Commerce Model ដែលមានន័យថា Business លក់ផលិតផលដោយផ្ទាល់ទៅ Individual Customers។
+Phonk Fashion នឹងលក់ផលិតផលសម្លៀកបំពាក់ដោយផ្ទាល់ទៅអតិថិជន តាមរយៈ E-Commerce Website។ អតិថិជនអាច Browse Products, View Product Details, Add to Cart, Place Order និងធ្វើ Mock Payment តាម Online។
+2. System Planning
+2.1 System Requirements
+Customer can register and log in.
+Customer can browse products and categories.
+Customer can search for products.
+Customer can view product details.
+Customer can add/remove products from cart.
+Customer can checkout and create an order.
+Customer can choose a mock payment method.
+Customer can view order status.
+Admin can manage products, categories, customers and orders.
+2.2 User Roles
+Role
+Main Responsibilities
+Main Access
+Customer
+Browse, search, cart, checkout, payment, view orders
+Customer pages
+Admin
+Manage products, categories, customers and orders
+Admin panel
+2.3 Main Features
+Home Page
+Product Categories
+Product Listing
+Product Details
+Search
+Shopping Cart
+Checkout
+Login / Register
+Order Management
+Mock Payment
+Admin Dashboard
+Product / Category / Customer / Order Management
+2.4 Main Business Process
+1. Customer opens the website – អតិថិជនចូលទៅកាន់ Phonk Fashion Website។
+2. Browse or Search Products – អតិថិជនអាច Browse ឬ Search រកផលិតផលដែលខ្លួនចង់បាន។
+3. View Product Details – អតិថិជនចុចលើផលិតផល ដើម្បីមើល Product Details ដូចជា រូបភាព តម្លៃ Size និងព័ត៌មានផ្សេងៗ។
+4. Add to Cart – អតិថិជនជ្រើសរើសផលិតផល ហើយចុច Add to Cart។
+5. Review Cart and Checkout – អតិថិជនពិនិត្យផលិតផលក្នុង Shopping Cart រួចចុច Checkout។
+6. Enter Order Information – អតិថិជនបញ្ចូល ឬជ្រើសរើស Order Information ដូចជា ឈ្មោះ អាសយដ្ឋាន និងលេខទូរស័ព្ទ។
+7. Select Mock Payment Method – អតិថិជនជ្រើសរើស Mock Payment Method សម្រាប់ការទូទាត់បែបសាកល្បង។
+8. Payment Confirmation and Order Creation – System បញ្ជាក់ថា Payment បានជោគជ័យ ហើយបង្កើត Order ថ្មី។
+9. Admin Manages the Order – Admin ទទួលបាន Order ហើយអាច View និង Manage Order។
+10. Order Processing and Delivery – Order ត្រូវបាន Processed និងរៀបចំ Delivery ទៅកាន់អតិថិជន។
+2.5 Basic User Flow
+Home → Category/Search → Product List → Product Details → Add to Cart → Cart → Checkout → Payment → Confirmation → Order History
+2.6 Website Sitemap
+Home
+├── Categories
+│   ├── Men
+│   ├── Women
+│   └── Accessories
+├── Products
+│   └── Product Details
+├── Search
+├── Cart
+├── Checkout
+├── Login / Register
+├── My Orders
+└── Admin
+    ├── Dashboard
+    ├── Products
+    ├── Categories
+    ├── Customers
+    └── Orders
+3. UI Front-End E-Commerce
+Screen
+Purpose
+Important Components
+Home
+Introduce store and products
+Banner, categories, featured products
+Products
+Show available products
+Product cards, category filter
+Product Details
+Show one product
+Image, name, price, description, Add to Cart
+Search
+Find products
+Search box, results
+Cart
+Review selected products
+Items, quantity, subtotal, total
+Checkout
+Create an order
+Customer info, address, payment
+Login/Register
+Authenticate users
+Email, password, registration form
+Orders
+Track customer orders
+Order ID, status, total
+4. Database Design
+Database ត្រូវបានរចនាឡើងសម្រាប់ Store Data របស់ប្រព័ន្ធ ដូចជា Users, Categories, Products, Orders, Order Items និង Payments។
+ក្នុង Database នេះ Primary Key (PK) ប្រើសម្រាប់ Uniquely Identify រាល់ Record មួយៗ ដើម្បីកុំឱ្យមានទិន្នន័យស្ទួន។
+ចំណែក Foreign Key (FK) ប្រើសម្រាប់ Connect Related Tables ជាមួយគ្នា ដើម្បីឱ្យ Tables ដែលមានទំនាក់ទំនងគ្នាអាចភ្ជាប់ និងរកទិន្នន័យបានត្រឹមត្រូវ។
+ឧទាហរណ៍៖ Orders អាចភ្ជាប់ជាមួយ Users តាមរយៈ user_id ហើយ Order Items អាចភ្ជាប់ជាមួយ Products តាមរយៈ product_id។
+4.1 Database Tables
+Table
+Primary Key
+Foreign Key
+Important Fields
+Relationship
+users
+user_id
+—
+name, email, password, role
+1:N with orders
+categories
+category_id
+—
+name
+1:N with products
+products
+product_id
+category_id
+name, price, stock, image
+N:1 with categories; 1:N with order_items
+orders
+order_id
+user_id
+order_date, status, total
+N:1 with users; 1:N with order_items
+order_items
+order_item_id
+order_id, product_id
+quantity, price
+N:1 with orders and products
+payments
+payment_id
+order_id
+method, amount, status
+1:1 with orders
+4.2 Relationships
+Users 1:N Orders – មានន័យថា Customer ម្នាក់អាច Place Orders បានច្រើន។.
+Categories 1:N Products – មានន័យថា Category មួយអាចមាន Products ច្រើន។
+Orders 1:N Order_Items – មានន័យថា Order មួយអាចមាន Order Items ច្រើន។
+Products 1:N Order_Items – មានន័យថា Product មួយអាចត្រូវបានបញ្ចូលក្នុង Order Items ច្រើន ពី Orders ផ្សេងៗគ្នា។
+Orders 1:1 Payments – មានន័យថា Order មួយមាន Payment Record មួយ នៅក្នុង Project នេះ។ Payment នោះរក្សាទុកព័ត៌មានអំពីការទូទាត់របស់ Order។
+4.3 ERD
+Figure 1: E-Commerce Database ERD
+5. Project Output / Submission Plan
+Project Planning Sheet – រៀបចំផែនការរបស់ Project ដូចជា Business, Business Process និង Website Planning។
+Short Presentation – ធ្វើ Presentation ខ្លី ដើម្បីពន្យល់អំពី Business Idea, Business Process, User Flow និង Sitemap។
+Word Document – រៀបចំជា Microsoft Word Document ដែលមាន Business Planning និង System Planning របស់ Project។
+Database Design – រៀបចំ Database Tables, Primary Keys (PK), Foreign Keys (FK), Relationships និង ERD។
+Upload Source Code ទៅកាន់ Assigned Git Repository។.
+6. Short Presentation Outline
+Slide
+Topic
+Content
+Slide 1
+Project Introduction
+Phonk Fashion – Online Clothing Store
+Slide 2
+Business Idea
+Online clothing shopping with product browsing and ordering.
+Slide 3
+Target Customer
+Young customers and online shoppers.
+Slide 4
+E-Commerce Model
+B2C – Business sells directly to customers.
+Slide 5
+Main Process
+Browse → Product → Cart → Checkout → Payment → Order.
+Slide 6
+Website Sitemap
+Home, Categories, Products, Search, Cart, Checkout, Orders, Admin.
+Slide 7
+Database Design
+Users, Categories, Products, Orders, Order_Items, Payments.
+Slide 8
+Conclusion
+A planned e-commerce system that supports online product sales and order management.
+7. Conclusion
+Project Planning នេះបានកំណត់អំពី Business Idea, Target Customers និង B2C E-Commerce Model របស់ Phonk Fashion។ វាក៏បានរៀបចំ System Requirements, User Roles, Main Business Process, User Flow, Website Sitemap និង Database Design ផងដែរ។
+ការរចនា និងការរៀបចំទាំងនេះ អាចប្រើជាមូលដ្ឋាន (Foundation) សម្រាប់ការអភិវឌ្ឍ Final E-Commerce System នៅពេលក្រោយ ដើម្បីឱ្យប្រព័ន្ធមានរចនាសម្ព័ន្ធច្បាស់លាស់ និងងាយស្រួលក្នុងការអភិវឌ្ឍ។
+Note: Project Structure នេះត្រូវបានរៀបចំតាម Project Planning / E-Commerce Project Requirements ដែលបានកំណត់។
+មុនពេល Submit Assignment ត្រូវបំពេញព័ត៌មានដែលនៅទទេ ដូចជា Student Name, Student ID, Team Members និង Class/Instructor Information។
+បន្ទាប់មក ត្រូវបន្ថែម Actual UI Screenshots របស់ Website/App និង GitHub Repository Link ដែលបាន Upload Source Code ពិតប្រាកដរបស់ Project។

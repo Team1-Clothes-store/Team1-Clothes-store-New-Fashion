@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Fashion – Modern Streetwear Online Store</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="header-top-banner">
+        ⚡ FREE SHIPPING ON ORDERS OVER $75 • USE PROMO CODE <strong>NEW10</strong> FOR 10% OFF • MIDTERM ASSIGNMENT PG-B
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="nav-row">
+                <!-- Brand Logo -->
+                <div class="brand-logo-area" onclick="App.navigateTo('home')">
+                    <span class="logo-badge">NF</span>
+                    <span class="brand-name">NEW <span>FASHION</span></span>
+                </div>
+
+                <!-- Nav Menu -->
+                <nav class="nav-links-menu">
+                    <a href="#home" class="nav-link active" data-view="home" onclick="App.navigateTo('home')">Home</a>
+                    <a href="#products" class="nav-link" data-view="products" onclick="App.navigateTo('products')">Shop All</a>
+                    <a href="#orders" class="nav-link" data-view="orders" onclick="App.navigateTo('orders')">Track Orders</a>
+                    <a href="#admin" class="nav-link" id="nav-admin-link" data-view="admin" onclick="App.navigateTo('admin')">Admin Panel</a>
+                </nav>
+
+                <!-- Search Bar -->
+                <div class="nav-search-bar">
+                    <span class="search-icon-inside">🔍</span>
+                    <input type="text" id="global-search-input" placeholder="Search hoodies, tees, caps..." />
+                </div>
+
+                <!-- Action Controls -->
+                <div class="nav-action-buttons">
+                    <!-- Assignment Presentation Slide Deck -->
+                    <button class="btn-nav-pres" onclick="Presentation.openModal(1)" title="View Assignment Midterm Presentation Slides">
+                        📊 <span>Midterm Slides</span>
+                    </button>
+
+                    <!-- Database Schema / ERD -->
+                    <button class="nav-icon-btn" onclick="App.openSchemaModal()" title="View Database Schema & ERD (Section 4)">
+                        🗄️
+                    </button>
+
+                    <!-- Account / Auth Button -->
+                    <button class="nav-icon-btn" onclick="App.openAuthModal()" title="Account Login / Register">
+                        👤 <span id="nav-user-label" style="display:none;"></span>
+                    </button>
+
+                    <!-- Cart Drawer Trigger -->
+                    <button class="nav-icon-btn" onclick="App.openCartDrawer()" title="View Shopping Cart">
+                        🛒
+                        <span class="cart-badge-count" style="display: none;">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN VIEW CONTAINER (SPA View Switching) -->
+    <main class="main-content">
+
+        <!-- ==============================================
+             VIEW 1: HOME PAGE
+             ============================================== -->
+        <section id="view-home" class="view-section">
+            <!-- Hero Banner -->
+            <div class="hero-section">
+                <div class="container">
+                    <div class="hero-grid">
+                        <div class="hero-text-content">
+                            <div class="hero-pill-badge">
+                                <span>🔥 New Collection Drop 2026</span>
+                            </div>
+                            <h1 class="hero-title">
+                                REDEFINE YOUR <br>
+                                <span class="gradient-text">STREET AESTHETIC</span>
+                            </h1>
+                            <p class="hero-description">
+                                Premium oversized streetwear, tech cargo trousers, and modern accessories engineered for comfort, durability, and raw attitude.
+                            </p>
+                            <div class="hero-buttons-row">
+                                <button class="btn btn-primary" onclick="App.navigateTo('products')">
+                                    Shop Collection ➜
+                                </button>
+                                <button class="btn btn-secondary" onclick="Presentation.openModal(1)">
+                                    Assignment Midterm Presentation
+                                </button>
+                            </div>
+
+                            <div class="hero-stats-row">
+                                <div class="hero-stat-item">
+                                    <strong>100%</strong>
+                                    <span>Pure Combed Cotton</span>
+                                </div>
+                                <div class="hero-stat-item">
+                                    <strong>1-3 Days</strong>
+                                    <span>Phnom Penh & Nationwide</span>
+                                </div>
+                                <div class="hero-stat-item">
+                                    <strong>KHQR / Card</strong>
+                                    <span>Safe Mock Payments</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hero-visual-card">
+                            <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=900&auto=format&fit=crop&q=80" alt="Streetwear Model" class="hero-banner-img" />
+                            <div class="hero-floating-tag">
+                                <div>
+                                    <strong>Exclusive Drop #04</strong>
+                                    <div class="text-muted" style="font-size: 0.8rem;">Limited units in stock</div>
+                                </div>
+                                <button class="btn btn-primary btn-sm" onclick="App.navigateTo('products')">Explore</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Value Props Row -->
+            <div class="value-props-section">
+                <div class="container">
+                    <div class="value-props-grid">
+                        <div class="value-prop-card">
+                            <div class="prop-icon">🚚</div>
+                            <div class="prop-content">
+                                <h4>Express Delivery</h4>
+                                <p>Fast shipping nationwide with tracking</p>
+                            </div>
+                        </div>
+                        <div class="value-prop-card">
+                            <div class="prop-icon">💳</div>
+                            <div class="prop-content">
+                                <h4>Mock Payment Gateways</h4>
+                                <p>ABA KHQR, Credit Card, and COD</p>
+                            </div>
+                        </div>
+                        <div class="value-prop-card">
+                            <div class="prop-icon">✨</div>
+                            <div class="prop-content">
+                                <h4>Premium Streetwear</h4>
+                                <p>Heavyweight 240GSM cotton & techwear</p>
+                            </div>
+                        </div>
+                        <div class="value-prop-card">
+                            <div class="prop-icon">🔄</div>
+                            <div class="prop-content">
+                                <h4>7-Day Free Exchange</h4>
+                                <p>Hassle-free size replacement</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category Tri-Grid Preview -->
+            <div class="categories-preview-section">
+                <div class="container">
+                    <div class="section-header">
+                        <div>
+                            <h2 class="section-title">Shop by Category</h2>
+                            <p class="section-subtitle">Curated fits designed for the urban lifestyle</p>
+                        </div>
+                        <button class="btn btn-outline" onclick="App.navigateTo('products')">View All Collections</button>
+                    </div>
+
+                    <div class="categories-tri-grid">
+                        <!-- Men's Clothing -->
+                        <div class="category-banner-card" onclick="App.filterByCategory(1)">
+                            <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=800&auto=format&fit=crop&q=80" alt="Men's Clothing" class="cat-bg-img" />
+                            <div class="cat-card-overlay">
+                                <h3 class="cat-card-title">Men's Streetwear</h3>
+                                <p class="cat-card-sub">Oversized Tees, Heavy Hoodies & Utility Cargos</p>
+                                <span class="cat-card-link">Explore Men ➜</span>
+                            </div>
+                        </div>
+
+                        <!-- Women's Clothing -->
+                        <div class="category-banner-card" onclick="App.filterByCategory(2)">
+                            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&auto=format&fit=crop&q=80" alt="Women's Clothing" class="cat-bg-img" />
+                            <div class="cat-card-overlay">
+                                <h3 class="cat-card-title">Women's Streetwear</h3>
+                                <p class="cat-card-sub">Gothic Slip Dresses, Mesh Crops & Pleated Skirts</p>
+                                <span class="cat-card-link">Explore Women ➜</span>
+                            </div>
+                        </div>
+
+                        <!-- Accessories -->
+                        <div class="category-banner-card" onclick="App.filterByCategory(3)">
+                            <img src="https://images.unsplash.com/photo-1523779917675-b6ed3a42a561?w=800&auto=format&fit=crop&q=80" alt="Fashion Accessories" class="cat-bg-img" />
+                            <div class="cat-card-overlay">
+                                <h3 class="cat-card-title">Street Accessories</h3>
+                                <p class="cat-card-sub">Trucker Caps, Chest Bags & Titanium Chains</p>
+                                <span class="cat-card-link">Explore Accessories ➜</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Products Grid -->
+            <div class="container mt-4" style="margin-bottom: 70px;">
+                <div class="section-header">
+                    <div>
+                        <h2 class="section-title">Trending Drops</h2>
+                        <p class="section-subtitle">Most popular pieces chosen by our community</p>
+                    </div>
+                    <button class="btn btn-secondary" onclick="App.navigateTo('products')">View Complete Catalog</button>
+                </div>
+
+                <div class="products-grid" id="featured-products-grid">
+                    <!-- Injected via Store.renderFeaturedGrid() -->
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==============================================
+             VIEW 2: PRODUCTS CATALOG (SHOP ALL & SEARCH)
+             ============================================== -->
+        <section id="view-products" class="view-section" style="display: none;">
+            <div class="container">
+                <div class="catalog-toolbar">
+                    <!-- Category Pills -->
+                    <div class="category-pills-row" id="category-filter-pills">
+                        <!-- Populated by App.updateCategoryNav() -->
+                    </div>
+
+                    <!-- Filter & Sort Bar -->
+                    <div class="filter-controls-row">
+                        <span id="catalog-product-count" class="text-muted" style="font-size: 0.9rem;">16 products found</span>
+
+                        <div class="filter-group-inline">
+                            <!-- Price Range Filter -->
+                            <select class="filter-select" onchange="Store.setPriceRange(this.value)">
+                                <option value="all">All Prices</option>
+                                <option value="under30">Under $30</option>
+                                <option value="30to50">$30 - $50</option>
+                                <option value="over50">Over $50</option>
+                            </select>
+
+                            <!-- Sorting Select -->
+                            <select class="filter-select" onchange="Store.setSort(this.value)">
+                                <option value="featured">Sort by: Featured</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="name">Product Name (A-Z)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="products-grid mt-4" id="catalog-products-grid" style="margin-bottom: 80px;">
+                    <!-- Rendered by Store.renderProductsView() -->
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==============================================
+             VIEW 3: CHECKOUT & MOCK PAYMENT
+             ============================================== -->
+        <section id="view-checkout" class="view-section" style="display: none;">
+            <div class="container">
+                <div class="checkout-grid">
+                    <!-- Left Column: Customer Info & Payment -->
+                    <div class="checkout-form-column">
+                        <!-- Step 1: Customer Info -->
+                        <div class="checkout-card">
+                            <h3 class="checkout-section-title">
+                                <span>📍 1. Delivery Information</span>
+                            </h3>
+                            <div class="form-row-2col">
+                                <div class="form-group">
+                                    <label>Full Name *</label>
+                                    <input type="text" id="checkout-name" placeholder="e.g. Niem Sreynit" required />
+                                </div>
+                                <div class="form-group">
+                                    <label>Phone Number *</label>
+                                    <input type="tel" id="checkout-phone" placeholder="e.g. +855 12 345 678" required />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" id="checkout-email" placeholder="e.g. sreynit@gmail.com" />
+                            </div>
+                            <div class="form-group">
+                                <label>Shipping Address (Street, House/Condo #, City) *</label>
+                                <textarea id="checkout-address" rows="2" placeholder="e.g. Street 315, Toul Kork, Phnom Penh, Cambodia" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Delivery Notes (Optional)</label>
+                                <input type="text" id="checkout-notes" placeholder="e.g. Call before arrival, leave with security" />
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Mock Payment Method Selection -->
+                        <div class="checkout-card">
+                            <h3 class="checkout-section-title">
+                                <span>💳 2. Select Mock Payment Method</span>
+                            </h3>
+
+                            <div class="payment-options-selector">
+                                <div class="payment-option-card selected" data-method="ABA KHQR" onclick="Checkout.selectPaymentMethod('ABA KHQR')">
+                                    <div class="payment-opt-icon">📱</div>
+                                    <div class="payment-opt-title">ABA KHQR</div>
+                                    <div class="payment-opt-sub">Scan via Banking App</div>
+                                </div>
+                                <div class="payment-option-card" data-method="Credit Card" onclick="Checkout.selectPaymentMethod('Credit Card')">
+                                    <div class="payment-opt-icon">💳</div>
+                                    <div class="payment-opt-title">Credit Card</div>
+                                    <div class="payment-opt-sub">Visa / MasterCard Mock</div>
+                                </div>
+                                <div class="payment-option-card" data-method="Cash on Delivery" onclick="Checkout.selectPaymentMethod('Cash on Delivery')">
+                                    <div class="payment-opt-icon">💵</div>
+                                    <div class="payment-opt-title">Cash on Delivery</div>
+                                    <div class="payment-opt-sub">Pay upon delivery</div>
+                                </div>
+                            </div>
+
+                            <!-- Payment Container: ABA KHQR -->
+                            <div id="payment-khqr-fields" class="khqr-box">
+                                <div class="khqr-header">KHQR BAKONG</div>
+                                <!-- Mock KHQR SVG pattern -->
+                                <svg class="khqr-qr-svg" viewBox="0 0 100 100">
+                                    <rect width="100" height="100" fill="#ffffff"/>
+                                    <!-- Corner 1 -->
+                                    <rect x="5" y="5" width="28" height="28" fill="#000000"/>
+                                    <rect x="9" y="9" width="20" height="20" fill="#ffffff"/>
+                                    <rect x="13" y="13" width="12" height="12" fill="#000000"/>
+                                    <!-- Corner 2 -->
+                                    <rect x="67" y="5" width="28" height="28" fill="#000000"/>
+                                    <rect x="71" y="9" width="20" height="20" fill="#ffffff"/>
+                                    <rect x="75" y="13" width="12" height="12" fill="#000000"/>
+                                    <!-- Corner 3 -->
+                                    <rect x="5" y="67" width="28" height="28" fill="#000000"/>
+                                    <rect x="9" y="71" width="20" height="20" fill="#ffffff"/>
+                                    <rect x="13" y="75" width="12" height="12" fill="#000000"/>
+                                    <!-- Data dots -->
+                                    <rect x="40" y="10" width="6" height="6" fill="#000000"/>
+                                    <rect x="52" y="10" width="6" height="6" fill="#000000"/>
+                                    <rect x="40" y="24" width="6" height="6" fill="#000000"/>
+                                    <rect x="52" y="24" width="6" height="6" fill="#000000"/>
+                                    <rect x="10" y="42" width="6" height="6" fill="#000000"/>
+                                    <rect x="22" y="42" width="6" height="6" fill="#000000"/>
+                                    <rect x="40" y="42" width="20" height="20" fill="#e11d48"/>
+                                    <rect x="46" y="48" width="8" height="8" fill="#ffffff"/>
+                                    <rect x="68" y="42" width="6" height="6" fill="#000000"/>
+                                    <rect x="80" y="42" width="6" height="6" fill="#000000"/>
+                                    <rect x="40" y="68" width="6" height="6" fill="#000000"/>
+                                    <rect x="52" y="68" width="6" height="6" fill="#000000"/>
+                                    <rect x="68" y="68" width="6" height="6" fill="#000000"/>
+                                    <rect x="80" y="80" width="6" height="6" fill="#000000"/>
+                                    <rect x="68" y="80" width="6" height="6" fill="#000000"/>
+                                </svg>
+                                <div class="khqr-merchant">NEW FASHION STORE</div>
+                                <div class="khqr-amount" id="khqr-pay-amount">$0.00</div>
+                                <p class="khqr-tip">Scan with ABA Mobile, Bakong, or any Cambodian banking app.</p>
+                            </div>
+
+                            <!-- Payment Container: Credit Card Form -->
+                            <div id="payment-card-fields" style="display: none;">
+                                <div class="form-group">
+                                    <label>Card Number</label>
+                                    <input type="text" placeholder="4242 •••• •••• 4242" value="4242 8890 1234 5678" />
+                                </div>
+                                <div class="form-row-2col">
+                                    <div class="form-group">
+                                        <label>Expiry Date</label>
+                                        <input type="text" placeholder="MM/YY" value="12/28" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>CVV / CVC</label>
+                                        <input type="text" placeholder="123" value="888" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Cardholder Name</label>
+                                    <input type="text" placeholder="Name on card" value="NEW FASHION" />
+                                </div>
+                            </div>
+
+                            <!-- Payment Container: COD -->
+                            <div id="payment-cod-fields" style="display: none; padding: 16px; background: rgba(255,255,255,0.03); border-radius: var(--radius-md);">
+                                <p>💵 <strong>Cash on Delivery:</strong> Please prepare the exact cash amount for our delivery driver when receiving your package in Phnom Penh or provincial hubs.</p>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary btn-block" style="padding: 16px; font-size: 1.1rem;" onclick="Checkout.simulateProcessPayment()">
+                            🔒 Complete Order & Place Mock Payment
+                        </button>
+                    </div>
+
+                    <!-- Right Column: Order Summary -->
+                    <div class="checkout-summary-column">
+                        <div class="checkout-card" style="position: sticky; top: 100px;">
+                            <h3 class="checkout-section-title">Order Summary</h3>
+
+                            <!-- Items List -->
+                            <div id="checkout-items-list" class="checkout-items-summary" style="max-height: 280px; overflow-y: auto; margin-bottom: 20px;">
+                                <!-- Injected by Checkout.renderCheckoutSummary() -->
+                            </div>
+
+                            <!-- Totals Breakdown -->
+                            <div style="border-top: 1px solid var(--border-color); padding-top: 16px; display: flex; flex-direction: column; gap: 10px;">
+                                <div class="drawer-totals-row">
+                                    <span>Subtotal:</span>
+                                    <strong id="checkout-subtotal">$0.00</strong>
+                                </div>
+                                <div class="drawer-totals-row">
+                                    <span>Shipping Delivery:</span>
+                                    <strong id="checkout-shipping">$3.00</strong>
+                                </div>
+                                <div class="drawer-totals-row" style="color: var(--accent-success); display: none;">
+                                    <span>Discount Promo:</span>
+                                    <strong id="checkout-discount">-$0.00</strong>
+                                </div>
+                                <div class="drawer-totals-row grand-total" style="font-size: 1.35rem; margin-top: 10px;">
+                                    <span>Total:</span>
+                                    <span id="checkout-total" style="color: var(--brand-neon);">$0.00</span>
+                                </div>
+                            </div>
+
+                            <div class="modal-guarantees mt-4">
+                                <div class="guarantee-item">🛡️ <span>100% Secure Mock Transaction</span></div>
+                                <div class="guarantee-item">🧾 <span>Automated Order Invoice & Tracking</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==============================================
+             VIEW 4: ORDER CONFIRMATION
+             ============================================== -->
+        <section id="view-order-confirmation" class="view-section" style="display: none;">
+            <div class="container">
+                <div class="order-conf-container">
+                    <div class="conf-check-icon">✓</div>
+                    <h2 style="font-size: 2rem; font-weight: 900;">Thank You for Your Order!</h2>
+                    <p class="text-secondary mt-2">Your mock payment was verified and your order has been registered in the database.</p>
+
+                    <div class="conf-details-card">
+                        <div class="conf-info-grid">
+                            <div class="conf-info-item">
+                                <span>Order Number:</span>
+                                <strong id="conf-order-id">#NF-101</strong>
+                            </div>
+                            <div class="conf-info-item">
+                                <span>Date & Time:</span>
+                                <strong id="conf-order-date">Nov 4, 2026</strong>
+                            </div>
+                            <div class="conf-info-item">
+                                <span>Total Paid:</span>
+                                <strong id="conf-order-total" style="color: var(--brand-neon);">$0.00</strong>
+                            </div>
+                            <div class="conf-info-item">
+                                <span>Payment Method:</span>
+                                <strong id="conf-payment-method">ABA KHQR (Paid)</strong>
+                            </div>
+                            <div class="conf-info-item" style="grid-column: span 2;">
+                                <span>Customer & Phone:</span>
+                                <strong id="conf-customer-name">Niem Sreynit</strong>
+                            </div>
+                            <div class="conf-info-item" style="grid-column: span 2;">
+                                <span>Delivery Address:</span>
+                                <strong id="conf-delivery-address">Phnom Penh, Cambodia</strong>
+                            </div>
+                        </div>
+
+                        <!-- Items List -->
+                        <div id="conf-items-list">
+                            <!-- Items populated here -->
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 14px; justify-content: center;">
+                        <button class="btn btn-primary" onclick="App.navigateTo('orders')">
+                            📦 Track Order Status
+                        </button>
+                        <button class="btn btn-secondary" onclick="App.navigateTo('products')">
+                            Continue Shopping
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==============================================
+             VIEW 5: MY ORDERS & TRACKING
+             ============================================== -->
+        <section id="view-orders" class="view-section" style="display: none;">
+            <div class="container" style="padding-top: 40px; padding-bottom: 80px;">
+                <div class="orders-page-header">
+                    <div>
+                        <h2 class="section-title">My Orders & Live Tracking</h2>
+                        <p class="section-subtitle">Track your delivery progress from warehouse to your doorstep</p>
+                    </div>
+
+                    <!-- Search by Order ID -->
+                    <div class="order-lookup-bar">
+                        <input type="text" id="order-search-input" placeholder="Search Order ID (e.g. 101)" />
+                        <button class="btn btn-secondary" onclick="Orders.searchOrderByNumber()">Track</button>
+                    </div>
+                </div>
+
+                <!-- Orders List -->
+                <div id="my-orders-list">
+                    <!-- Populated by Orders.renderOrdersView() -->
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ==============================================
+             VIEW 6: ADMIN CONTROL PANEL
+             ============================================== -->
+        <section id="view-admin" class="view-section" style="display: none;">
+            <div class="container admin-wrapper">
+                <div class="admin-header-row">
+                    <div>
+                        <span class="admin-title-badge">Administrator Portal</span>
+                        <h1 class="section-title">New Fashion Management</h1>
+                    </div>
+                    <div style="display: flex; gap: 10px;">
+                        <button class="btn btn-secondary btn-sm" onclick="App.openSchemaModal()">View SQL Schema</button>
+                        <button class="btn btn-danger btn-sm" onclick="Admin.resetDatabaseWithConfirm()">Reset Database</button>
+                    </div>
+                </div>
+
+                <!-- Admin Navigation Tabs -->
+                <div class="admin-nav-bar">
+                    <button class="admin-nav-item active" data-tab="dashboard" onclick="Admin.switchTab('dashboard')">
+                        📊 Dashboard Overview
+                    </button>
+                    <button class="admin-nav-item" data-tab="products" onclick="Admin.switchTab('products')">
+                        👕 Products Management
+                    </button>
+                    <button class="admin-nav-item" data-tab="categories" onclick="Admin.switchTab('categories')">
+                        📁 Categories
+                    </button>
+                    <button class="admin-nav-item" data-tab="orders" onclick="Admin.switchTab('orders')">
+                        📦 Orders & Status
+                    </button>
+                    <button class="admin-nav-item" data-tab="customers" onclick="Admin.switchTab('customers')">
+                        👥 Customers
+                    </button>
+                    <button class="admin-nav-item" data-tab="database" onclick="Admin.switchTab('database')">
+                        🗄️ Relational Database
+                    </button>
+                </div>
+
+                <!-- TAB 1: DASHBOARD -->
+                <div id="admin-dashboard-pane" class="admin-tab-pane">
+                    <!-- 4 KPI Cards -->
+                    <div class="stats-cards-grid">
+                        <div class="stat-metric-card">
+                            <div class="stat-icon-wrapper stat-icon-rev">💰</div>
+                            <div class="stat-data">
+                                <h5>Total Revenue</h5>
+                                <div class="stat-number" id="stat-revenue">$0.00</div>
+                            </div>
+                        </div>
+                        <div class="stat-metric-card">
+                            <div class="stat-icon-wrapper stat-icon-ord">📦</div>
+                            <div class="stat-data">
+                                <h5>Total Orders</h5>
+                                <div class="stat-number" id="stat-orders">0</div>
+                            </div>
+                        </div>
+                        <div class="stat-metric-card">
+                            <div class="stat-icon-wrapper stat-icon-prd">👕</div>
+                            <div class="stat-data">
+                                <h5>Products in Stock</h5>
+                                <div class="stat-number" id="stat-products">0</div>
+                            </div>
+                        </div>
+                        <div class="stat-metric-card">
+                            <div class="stat-icon-wrapper stat-icon-cst">👥</div>
+                            <div class="stat-data">
+                                <h5>Registered Users</h5>
+                                <div class="stat-number" id="stat-customers">0</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Orders Table -->
+                    <div class="admin-card-panel">
+                        <div class="panel-header-action">
+                            <h3>Recent Customer Orders</h3>
+                            <button class="btn btn-outline btn-sm" onclick="Admin.switchTab('orders')">View All Orders</button>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="admin-data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Order ID</th>
+                                        <th>Customer</th>
+                                        <th>Date</th>
+                                        <th>Total</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="admin-recent-orders-body">
+                                    <!-- Injected by Admin.renderDashboard() -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 2: PRODUCTS CRUD -->
+                <div id="admin-products-pane" class="admin-tab-pane" style="display: none;">
+                    <div class="admin-card-panel">
+                        <div class="panel-header-action">
+                            <h3>Streetwear Product Inventory</h3>
+                            <button class="btn btn-primary btn-sm" onclick="Admin.openAddProductModal()">+ Add New Product</button>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="admin-data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Product Name & Category</th>
+                                        <th>Price</th>
+                                        <th>Stock</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="admin-products-tbody">
+                                    <!-- Populated by Admin.renderProductsTable() -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 3: CATEGORIES CRUD -->
+                <div id="admin-categories-pane" class="admin-tab-pane" style="display: none;">
+                    <div class="admin-card-panel">
+                        <div class="panel-header-action">
+                            <h3>Category Management</h3>
+                            <button class="btn btn-primary btn-sm" onclick="Admin.openAddCategoryModal()">+ Add Category</button>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="admin-data-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Category Name</th>
+                                        <th>Description</th>
+                                        <th>Item Count</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="admin-categories-tbody">
+                                    <!-- Injected by Admin.renderCategoriesTable() -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 4: ORDERS -->
+                <div id="admin-orders-pane" class="admin-tab-pane" style="display: none;">
+                    <div class="admin-card-panel">
+                        <div class="panel-header-action">
+                            <h3>All Customer Orders & Status Management</h3>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="admin-data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Order ID</th>
+                                        <th>Customer Details</th>
+                                        <th>Date</th>
+                                        <th>Total</th>
+                                        <th>Change Status</th>
+                                        <th>Receipt</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="admin-orders-tbody">
+                                    <!-- Populated by Admin.renderOrdersTable() -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 5: CUSTOMERS -->
+                <div id="admin-customers-pane" class="admin-tab-pane" style="display: none;">
+                    <div class="admin-card-panel">
+                        <div class="panel-header-action">
+                            <h3>Registered Customers & Users</h3>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="admin-data-table">
+                                <thead>
+                                    <tr>
+                                        <th>User ID</th>
+                                        <th>Name & Email</th>
+                                        <th>Role</th>
+                                        <th>Phone</th>
+                                        <th>Orders Count</th>
+                                        <th>Total Spent</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="admin-customers-tbody">
+                                    <!-- Populated by Admin.renderCustomersTable() -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 6: DATABASE ENGINE -->
+                <div id="admin-database-pane" class="admin-tab-pane" style="display: none;">
+                    <div id="admin-db-viewer">
+                        <!-- Populated by Admin.renderDatabaseTools() -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ==============================================
+         GLOBAL MODALS & DRAWERS
+         ============================================== -->
+
+    <!-- 1. CART SLIDE-OVER DRAWER -->
+    <div class="cart-overlay" id="cart-overlay" onclick="App.closeCartDrawer()"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer-header">
+            <h3>Shopping Cart (<span class="cart-badge-count">0</span>)</h3>
+            <button class="modal-close-btn" onclick="App.closeCartDrawer()">✕</button>
+        </div>
+
+        <div class="cart-drawer-items" id="cart-drawer-items">
+            <!-- Populated by App.renderCartDrawer() -->
+        </div>
+
+        <div class="cart-drawer-footer">
+            <!-- Promo Code Input -->
+            <div class="drawer-promo-box">
+                <input type="text" id="drawer-promo-input" placeholder="Promo code (NEW10 or MIDTERM)" />
+                <button class="btn btn-secondary btn-sm" onclick="App.applyPromoFromDrawer()">Apply</button>
+            </div>
+            <div id="drawer-promo-badge" style="font-size: 0.8rem; color: var(--accent-success); margin-bottom: 8px;"></div>
+
+            <div class="drawer-totals-row">
+                <span>Subtotal:</span>
+                <strong id="drawer-subtotal">$0.00</strong>
+            </div>
+            <div class="drawer-totals-row" id="drawer-discount-row" style="color: var(--accent-success); display: none;">
+                <span>Discount:</span>
+                <strong id="drawer-discount-val">-$0.00</strong>
+            </div>
+            <div class="drawer-totals-row grand-total">
+                <span>Total:</span>
+                <span id="drawer-total" style="color: var(--brand-neon);">$0.00</span>
+            </div>
+
+            <button class="btn btn-primary btn-block" onclick="App.proceedToCheckout()">
+                Proceed to Checkout ➜
+            </button>
+        </div>
+    </div>
+
+
+    <!-- 2. PRODUCT QUICK VIEW / DETAILS MODAL -->
+    <div class="modal-backdrop" id="product-detail-modal" onclick="if(event.target===this) Store.closeProductModal()">
+        <div class="modal-container">
+            <button class="modal-close-btn" onclick="Store.closeProductModal()">✕</button>
+            <div id="product-modal-content">
+                <!-- Injected by Store.openProductModal() -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 3. AUTH MODAL (LOGIN / REGISTER) -->
+    <div class="modal-backdrop" id="auth-modal" onclick="if(event.target===this) App.closeAuthModal()">
+        <div class="modal-container" style="max-width: 460px; padding: 32px;">
+            <button class="modal-close-btn" onclick="App.closeAuthModal()">✕</button>
+
+            <!-- Tabs -->
+            <div style="display: flex; gap: 10px; margin-bottom: 24px;">
+                <button class="btn btn-secondary btn-block active" id="auth-tab-login" onclick="App.switchAuthTab('login')">Login</button>
+                <button class="btn btn-secondary btn-block" id="auth-tab-register" onclick="App.switchAuthTab('register')">Register</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="auth-login-form" onsubmit="App.handleLoginSubmit(event)">
+                <h3 style="margin-bottom: 16px;">Welcome Back</h3>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="login-email" placeholder="e.g. sreynit@gmail.com" required />
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="login-password" placeholder="••••••••" required />
+                </div>
+                <button type="submit" class="btn btn-primary btn-block mt-3">Sign In</button>
+
+                <!-- Quick Seed Fill Demo Buttons -->
+                <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border-color);">
+                    <small class="text-muted" style="display: block; margin-bottom: 8px;">Demo Fast Login:</small>
+                    <div style="display: flex; gap: 8px;">
+                        <button type="button" class="btn btn-secondary btn-sm" onclick="App.quickFillAuth('sreynit@gmail.com', 'user123')">👤 Customer</button>
+                        <button type="button" class="btn btn-secondary btn-sm" onclick="App.quickFillAuth('admin@newfashion.com', 'admin123')">🔑 Admin</button>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Register Form -->
+            <form id="auth-register-form" style="display: none;" onsubmit="App.handleRegisterSubmit(event)">
+                <h3 style="margin-bottom: 16px;">Create Customer Account</h3>
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="reg-name" placeholder="Niem Sreynit" required />
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="reg-email" placeholder="name@domain.com" required />
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="reg-password" placeholder="At least 6 characters" required />
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" id="reg-phone" placeholder="+855 12 345 678" />
+                </div>
+                <div class="form-group">
+                    <label>Delivery Address</label>
+                    <input type="text" id="reg-address" placeholder="Toul Kork, Phnom Penh" />
+                </div>
+                <button type="submit" class="btn btn-primary btn-block mt-3">Create Account</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- 4. MIDTERM PRESENTATION SLIDES MODAL (Section 6) -->
+    <div class="presentation-backdrop" id="presentation-modal" onclick="if(event.target===this) Presentation.closeModal()">
+        <div class="presentation-window">
+            <div class="presentation-header">
+                <div>
+                    <strong>New Fashion – Midterm Presentation (Class PG-B)</strong>
+                </div>
+                <div style="display: flex; align-items: center; gap: 14px;">
+                    <span id="pres-slide-counter" class="slide-index-pill">1 / 8</span>
+                    <button class="modal-close-btn" style="position: static;" onclick="Presentation.closeModal()">✕</button>
+                </div>
+            </div>
+
+            <div class="presentation-body" id="pres-slide-body">
+                <!-- Injected by Presentation.renderSlide() -->
+            </div>
+
+            <div class="presentation-footer">
+                <button class="btn btn-secondary btn-sm" id="pres-btn-prev" onclick="Presentation.prevSlide()">
+                    ⬅ Previous Slide
+                </button>
+                <div class="text-muted" style="font-size: 0.85rem;">
+                    Keyboard: Use ◄ and ► Arrow Keys
+                </div>
+                <button class="btn btn-primary btn-sm" id="pres-btn-next" onclick="Presentation.nextSlide()">
+                    Next Slide ➜
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 5. DATABASE SCHEMA & ERD MODAL (Section 4) -->
+    <div class="modal-backdrop" id="schema-modal" onclick="if(event.target===this) App.closeSchemaModal()">
+        <div class="modal-container" style="max-width: 900px; padding: 32px;">
+            <button class="modal-close-btn" onclick="App.closeSchemaModal()">✕</button>
+            <h2 style="margin-bottom: 6px;">E-Commerce Relational Database Design</h2>
+            <p class="text-secondary" style="margin-bottom: 24px;">Matches Section 4.1 & 4.2 of the project planning document.</p>
+
+            <table class="slide-data-table">
+                <thead>
+                    <tr>
+                        <th>Table</th>
+                        <th>Primary Key (PK)</th>
+                        <th>Foreign Key (FK)</th>
+                        <th>Important Fields</th>
+                        <th>Relationship</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>users</code></td>
+                        <td>user_id</td>
+                        <td>—</td>
+                        <td>name, email, password, role, phone, address</td>
+                        <td>1:N with orders</td>
+                    </tr>
+                    <tr>
+                        <td><code>categories</code></td>
+                        <td>category_id</td>
+                        <td>—</td>
+                        <td>name, description</td>
+                        <td>1:N with products</td>
+                    </tr>
+                    <tr>
+                        <td><code>products</code></td>
+                        <td>product_id</td>
+                        <td>category_id</td>
+                        <td>name, price, stock, image, description</td>
+                        <td>N:1 categories; 1:N order_items</td>
+                    </tr>
+                    <tr>
+                        <td><code>orders</code></td>
+                        <td>order_id</td>
+                        <td>user_id</td>
+                        <td>order_date, status, total, customer_name, address</td>
+                        <td>N:1 users; 1:N order_items; 1:1 payments</td>
+                    </tr>
+                    <tr>
+                        <td><code>order_items</code></td>
+                        <td>order_item_id</td>
+                        <td>order_id, product_id</td>
+                        <td>quantity, price, size</td>
+                        <td>N:1 with orders and products</td>
+                    </tr>
+                    <tr>
+                        <td><code>payments</code></td>
+                        <td>payment_id</td>
+                        <td>order_id</td>
+                        <td>method, amount, status, transaction_ref</td>
+                        <td>1:1 with orders</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="margin-top: 24px; display: flex; gap: 12px; justify-content: flex-end;">
+                <button class="btn btn-secondary" onclick="App.closeSchemaModal()">Close</button>
+                <button class="btn btn-primary" onclick="Admin.exportDatabaseJSON()">Export JSON</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 6. INVOICE / RECEIPT MODAL -->
+    <div class="modal-backdrop" id="invoice-modal" onclick="if(event.target===this) Orders.closeInvoiceModal()">
+        <div class="modal-container" style="max-width: 680px; padding: 28px;">
+            <button class="modal-close-btn no-print" onclick="Orders.closeInvoiceModal()">✕</button>
+            <div id="invoice-modal-content">
+                <!-- Rendered by Orders.openInvoiceModal() -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 7. ADMIN PRODUCT ADD/EDIT MODAL -->
+    <div class="modal-backdrop" id="admin-product-modal" onclick="if(event.target===this) Admin.closeProductModal()">
+        <div class="modal-container" style="max-width: 520px; padding: 30px;">
+            <button class="modal-close-btn" onclick="Admin.closeProductModal()">✕</button>
+            <h3 id="admin-product-modal-title" style="margin-bottom: 20px;">Add New Product</h3>
+
+            <form id="admin-product-form" onsubmit="Admin.saveProductFromForm(event)">
+                <input type="hidden" id="admin-prod-id" />
+                <div class="form-group">
+                    <label>Product Name *</label>
+                    <input type="text" id="admin-prod-name" placeholder="e.g. Acid-Wash Street Tee" required />
+                </div>
+                <div class="form-row-2col">
+                    <div class="form-group">
+                        <label>Category *</label>
+                        <select id="admin-prod-category" required></select>
+                    </div>
+                    <div class="form-group">
+                        <label>Price ($ USD) *</label>
+                        <input type="number" step="0.01" id="admin-prod-price" placeholder="29.99" required />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Inventory Stock *</label>
+                    <input type="number" id="admin-prod-stock" placeholder="50" required />
+                </div>
+                <div class="form-group">
+                    <label>Image URL *</label>
+                    <input type="url" id="admin-prod-image" placeholder="https://..." required />
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="admin-prod-desc" rows="3" placeholder="Product details, material, fit..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block mt-3">Save Product</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- 8. PAYMENT PROCESSING ANIMATION MODAL -->
+    <div class="modal-backdrop" id="payment-processing-modal">
+        <div class="modal-container" style="max-width: 380px; text-align: center; padding: 40px;">
+            <div class="payment-spinner" style="font-size: 3rem; animation: spin 1s infinite linear; margin-bottom: 18px;">⚙️</div>
+            <h3>Processing Payment</h3>
+            <p id="processing-status-text" class="text-secondary mt-2">Connecting to payment gateway...</p>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATIONS CONTAINER -->
+    <div class="toast-container" id="toast-container"></div>
+
+
+    <!-- ==============================================
+         FOOTER
+         ============================================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="brand-logo-area">
+                        <span class="logo-badge">NF</span>
+                        <span class="brand-name">NEW <span>FASHION</span></span>
+                    </div>
+                    <p class="footer-brand-p">
+                        Modern B2C E-Commerce Streetwear & Apparel Platform. Developed as Midterm Project Planning & System Design Assignment.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#products" onclick="App.filterByCategory(1)">Men's Clothing</a></li>
+                        <li><a href="#products" onclick="App.filterByCategory(2)">Women's Clothing</a></li>
+                        <li><a href="#products" onclick="App.filterByCategory(3)">Fashion Accessories</a></li>
+                        <li><a href="#products" onclick="App.navigateTo('products')">New Drops</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" onclick="App.navigateTo('home')">Home Page</a></li>
+                        <li><a href="#orders" onclick="App.navigateTo('orders')">Track Order</a></li>
+                        <li><a href="#" onclick="Presentation.openModal(1)">Midterm Presentation</a></li>
+                        <li><a href="#admin" onclick="App.navigateTo('admin')">Admin Portal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Team Members (PG-B)</h4>
+                    <ul>
+                        <li>1. Niem sreynit</li>
+                        <li>2. Ruon Bulimunny</li>
+                        <li>3. Surs Panha</li>
+                        <li>4. Chem Malin</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom-bar">
+                <div>&copy; 2026 New Fashion. All rights reserved. Class: PG-B Midterm 1.</div>
+                <div>B2C E-Commerce Architecture</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Application Modules -->
+    <script src="assets/js/db.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/store.js"></script>
+    <script src="assets/js/checkout.js"></script>
+    <script src="assets/js/orders.js"></script>
+    <script src="assets/js/admin.js"></script>
+    <script src="assets/js/presentation.js"></script>
+    <script src="assets/js/app.js"></script>
+
+</body>
+</html>
